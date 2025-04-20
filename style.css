@@ -1,0 +1,317 @@
+/* Variabel warna */
+:root {
+    --warna-utama: #17a2b8;
+    --warna-gelap: #121212;
+    --warna-teks: #e0e0e0;
+}
+
+/* Style dasar */
+body {
+    background-color: var(--warna-gelap);
+    color: var(--warna-teks);
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header dan navigasi */
+.navbar {
+    background-color: #000000;
+    padding: 20px 0;
+}
+
+.navbar-nav .nav-link {
+    color: var(--warna-teks);
+    margin: 0 15px;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--warna-utama);
+}
+
+/* Halaman Beranda */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background-image: url('../img/bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+
+.hero h1, .hero p, .hero .social-icons, .hero  {
+    position: relative;
+    z-index: 2;
+}
+
+.social-icons {
+    margin-top: 40px;
+    margin-bottom: 60px; 
+    position: relative;
+    z-index: 2;
+}
+
+
+.scroll-down {
+    position: absolute;
+    bottom: 40px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--warna-teks);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+
+.scroll-down i {
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+.hero h1 {
+    color: white;
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: white;
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Social media icons */
+.social-icons {
+    margin-top: 40px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5rem;
+    margin: 0 10px;
+}
+
+/* Scroll down button */
+.scroll-down {
+    position: absolute;
+    bottom: 40px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--warna-teks);
+    text-decoration: none;
+}
+
+/* Tentang Saya */
+.about {
+    padding: 0;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    scroll-margin-top: 70px;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 50%;
+    height: 3px;
+    background-color: var(--warna-utama);
+}
+
+/* Pendidikan dan Keterampilan */
+.resume {
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #141414;
+    scroll-margin-top: 70px;
+}
+
+.education-item {
+    margin-bottom: 50px;
+}
+
+.education-item h3 {
+    color: white;
+    margin-bottom: 5px;
+}
+
+.education-period {
+    color: #999;
+    font-style: italic;
+}
+
+/* Skill bars */
+.skill-name {
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.skill-bar {
+    height: 40px;
+    background-color: #333;
+    margin-bottom: 30px;
+}
+
+.skill-percentage {
+    height: 100%;
+    background-color: var(--warna-utama);
+}
+
+/* Projects Section */
+.projects {
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: var(--warna-gelap);
+    scroll-margin-top: 70px;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.project-card {
+    background-color: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.project-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-info {
+    color: white;
+    padding: 20px;
+}
+
+.project-info h3 {
+    margin-top: 0;
+    color: var(--warna-utama);
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 15px;
+}
+
+.project-tag {
+    background-color: #2d2d2d;
+    color: var(--warna-teks);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+/* Kontak */
+.contact {
+    padding: 0;
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    scroll-margin-top: 70px;
+}
+
+.contact-info {
+    margin-bottom: 40px;
+}
+
+.contact-button {
+    background-color: var(--warna-utama);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.contact-button:hover {
+    background-color: #128293;
+}
+
+/* Footer */
+footer {
+    background-color: #000000;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Tombol kembali ke atas */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--warna-utama);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    z-index: 1000;
+}
